@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://cat83wdqdyhlq"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_b1beh"]
+[ext_resource type="Texture2D" uid="uid://dyp2ne5f0feqy" path="res://Assets/Gravitas assets/CosmicLilac_AnimatedSpriteSheet.png" id="1_dakvx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ho7e"]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7nop"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvkay"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poan1"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2hks"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydi1o"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckgx6"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qsob"]
+atlas = ExtResource("1_dakvx")
+region = Rect2(112, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2f170"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7nop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvkay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poan1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2hks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydi1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckgx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qsob")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_b1beh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2ho7e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_2f170")
+frame_progress = 0.506998
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)
