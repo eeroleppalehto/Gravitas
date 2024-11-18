@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cat83wdqdyhlq"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_b1beh"]
-[ext_resource type="Texture2D" uid="uid://dyp2ne5f0feqy" path="res://Assets/Gravitas_assets/CosmicLilac_AnimatedSpriteSheet.png" id="1_dakvx"]
+[ext_resource type="Texture2D" uid="uid://mi2ws1kehiqm" path="res://Assets/Gravitas_assets/CosmicLilac_AnimatedSpriteSheet.png" id="1_dakvx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ho7e"]
 radius = 8.0
