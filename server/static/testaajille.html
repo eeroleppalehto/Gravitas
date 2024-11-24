@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import htmx -->
+    <script src="https://unpkg.com/htmx.org@1.9.11"
+        integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
+        crossorigin="anonymous"></script>
+    <!-- Import Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <!-- Import Lato font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet" />
+    <!-- Import tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gollery</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-zinc-200 dark:bg-zinc-700 font-oswald text-zinc-700 dark:text-zinc-200 fill-zinc-700 dark:fill-zinc-200 h-5/6">
+    <main id="content-area" class="flex flex-col h-full items-center">
+        <div class="flex flex-col items-start gap-8 h-full max-w-screen-md mt-12">
+            <h1 class="font-semibold text-6xl sm:text-8xl tracking-tight mb-6">
+                Gravitas Testaus
+            </h1>
+            <p class="text-2xl font-lato mx-4 max-w-xl sm:text-3xl leading-10">
+                Testaussuunnitelma <b>Gravitas</b>-pelille:
+            </p>
+            <p class="text-2xl font-lato mx-4 max-w-xl sm:text-3xl leading-10">
+                Tämän päivän kohteena on testata pelin kahden eri gravitaatio toteutusta ja...
+            </p>
+            <a href="gravitas.html"
+                class="text-2xl font-lato mx-4 max-w-xl sm:text-3xl leading-10 underline">Gravitas-peli</a>
+            <a href="gravitas.html"
+                class="text-2xl font-lato mx-4 max-w-xl sm:text-3xl leading-10 underline">Gravitas-repositorio</a>
+            <a href="gravitas.html"
+                class="text-2xl font-lato mx-4 max-w-xl sm:text-3xl leading-10 underline">Forms-lomake</a>
+        </div>
+    </main>
+</body>
+
+</html>
