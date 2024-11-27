@@ -1,7 +1,7 @@
 extends Node
 
 # Global Gravity variables
-var mode = "scene"
+var mode
 var player: CharacterBody2D
 var isRotating = false
 var currentGravityDirection = SOUTH
@@ -19,10 +19,10 @@ const SOUTH = 0
 const EAST = 1
 const NORTH = 2
 const WEST = 3
-const GRAVITY_SOUTH = Vector2(0, 980) # Normal gravity
-const GRAVITY_EAST = Vector2(980, 0) # Player falls to east
-const GRAVITY_NORTH = Vector2(0, -980) # Player falls to north
-const GRAVITY_WEST = Vector2(-980, 0) # Player falls to west
+const GRAVITY_SOUTH = Vector2(0, 1000) # Normal gravity
+const GRAVITY_EAST = Vector2(1000, 0) # Player falls to east
+const GRAVITY_NORTH = Vector2(0, -1000) # Player falls to north
+const GRAVITY_WEST = Vector2(-1000, 0) # Player falls to west
 
 func rotate() -> void:
 	if mode == "scene":
@@ -58,17 +58,17 @@ func rotateScene() -> void:
 			rotation_state = 0
 		return
 
-	if Input.is_action_just_pressed("ui_down"):
-		isRotating = true
-		isTurningRight = true
-
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_gravity_left"):
 		isRotating = true
 		isTurningLeft = true
+
+	if Input.is_action_just_pressed("ui_gravity_right"):
+		isRotating = true
+		isTurningRight = true
 	
 
 func rotatePlayer() -> void:
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("ui_gravity_left"):
 		currentGravity = Vector2(currentGravity.y, -currentGravity.x)
 		currentGravityDirection = (currentGravityDirection + 1) % 4
 		
@@ -76,7 +76,7 @@ func rotatePlayer() -> void:
 		player.set_up_direction(Vector2(currentUpDirection.y, -currentUpDirection.x))
 		player.set_rotation_degrees(player.get_rotation_degrees() - 90)
 
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_gravity_right"):
 		currentGravity = Vector2(-currentGravity.y, currentGravity.x)
 		currentGravityDirection = (currentGravityDirection - 1) % 4
 		
