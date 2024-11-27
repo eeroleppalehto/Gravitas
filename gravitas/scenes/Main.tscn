@@ -19,16 +19,8 @@ offset_right = 705.0
 offset_bottom = 350.0
 text = "Play B"
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 448.0
-offset_top = 378.0
-offset_right = 705.0
-offset_bottom = 481.0
-text = "Quit"
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(595, 311)
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PlayB" to="." method="_on_play_b_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
