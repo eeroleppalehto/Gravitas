@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_2egk3"]
 [ext_resource type="PackedScene" uid="uid://cat83wdqdyhlq" path="res://scenes/player.tscn" id="1_cd85j"]
-[ext_resource type="Texture2D" uid="uid://tdqtu2i0jasr" path="res://Assets/Gravitas_assets/CosmicLilac_Tiles.png" id="2_vg6r5"]
+[ext_resource type="Texture2D" uid="uid://hnvqf5ukpc5k" path="res://Assets/Gravitas_assets/CosmicLilac_Tiles.png" id="2_vg6r5"]
 [ext_resource type="PackedScene" uid="uid://bj7k0o5hikuaa" path="res://scenes/collectableItems.tscn" id="4_p1tw5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dpgvs"]
