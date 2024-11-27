@@ -3,11 +3,11 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const NULL_VECTOR = Vector2(0, 0)
-
+var anim
 
 func _ready() -> void:
 	Gravity.player = self
-
+	anim=get_node("AnimationPlayer")
 func _physics_process(delta: float) -> void:
 	# TODO: check if on floor and put speed to 0 instead of the current implementation
 	# Add the gravity.
@@ -21,6 +21,11 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity -= Gravity.currentGravity * 0.5
+		anim.play("hyppy")
+	if velocity.y ==0:
+		anim.play("idle")
+	elif velocity.y >0:
+		anim.play("fall")
 	
 	move_and_slide()
 	
