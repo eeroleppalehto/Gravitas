@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		elif Gravity.currentGravity.x != 0:
 			velocity.y = direction * SPEED
 	else:
-		print(Gravity.currentGravityDirection)
+		# print(Gravity.currentGravityDirection)
 		if Gravity.currentGravity.y != 0:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		elif Gravity.currentGravity.x != 0:
