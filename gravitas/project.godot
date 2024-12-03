@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Gravity="*res://Scripts/Gravity.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_left={
