@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import htmx -->
+    <script src="https://unpkg.com/htmx.org@1.9.11"
+        integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
+        crossorigin="anonymous"></script>
+    <!-- Import Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <!-- Import Lato font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet" />
+    <!-- Import tailwindcss -->
+    <link rel="stylesheet" href="/static/tailwind.css" />
+    <title>Gravitas</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-zinc-200 dark:bg-zinc-700 font-oswald text-zinc-700 dark:text-zinc-200 fill-zinc-700 dark:fill-zinc-200">
+    <main id="content-area" class="flex flex-col items-center">
+        <div class="flex flex-col items-start gap-8 mt-12 mb-72">
+            <h1 class="font-semibold text-6xl sm:text-8xl tracking-tight mb-6">
+                Gravitas Testaus
+            </h1>
+            <p class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10">
+                Ohjeistus torstain 28.11. <b>Gravitas</b>-pelin testaukseen (Lue ohjeet kokonaisuudessaan ensin läpi!):
+            </p>
+            <p class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10">
+                Tämän päivän kohteena on testata pelin kahden eri gravitaatio toteutusta.
+            </p>
+            <p class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10">
+                Jakautukaa ryhmänne kesken kahteen ryhmään, joista toinen testaa pelin A-versiota ja toinen taas
+                B-versiota. Tämän jälkeen menkää "Gravitas-peli"-linkkistä kokeilemaan peliä. Kokeilkaa peliversiota
+                noin 5 minuutin ajan. Mikäli teillä on aikaa tai kiinnostusta voitte kokeilla pelin toista versiotakin.
+                Pääset takaisin alkuruutuun joko painamalla Esc-näppäintä tai uudelleen lataamalla sivun. Muut ohjain
+                näppäin asektukset löytyvät tämän sivun alareunasta.
+            </p>
+            <p class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10">
+                Kun testaatte peliä, kiinnitäkää varsinkin huomiota miltä hahmon ohjaus tuntuu ja miten selkeältä tai
+                sekavalta pelimaailma tuntuu gravitaation kanssa.
+            </p>
+            <p class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10">
+                Kun testannut peliä avatkaa Forms-lomake alla olevista linkestä ja täyttäkää se. Lomakkeen täytön
+                jälkeen testi on ohi ja voitte jatkaa elämäänne.
+            </p>
+            <a href="gravitas.html"
+                class="text-2xl text-amber-500 font-lato mx-4 max-w-xl sm:text-2xl leading-10 underline" target="_blank"
+                rel="noopener noreferrer">Gravitas-peli</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=hrwyq_ISOEuyYsV3WYLiQeayfAX6v6JLgGR8ujviYn9UREFYNVRJR0MxNjNTOERUNzZEVU1TTDBQUi4u"
+                class="text-2xl text-amber-500 font-lato mx-4 max-w-xl sm:text-2xl leading-10 underline" target="_blank"
+                rel="noopener noreferrer">Forms-lomake</a>
+            <a href="https://github.com/eeroleppalehto/Gravitas"
+                class="text-2xl text-amber-500 font-lato mx-4 max-w-xl sm:text-2xl leading-10 underline" target="_blank"
+                rel="noopener noreferrer">Gravitas-repositorio</a>
+
+            <h2 class="font-semibold text-xl sm:text-2xl tracking-tight mb-6">Ohjain näppäimet:</h2>
+            <ul class="space-y-4 w-full">
+                <li class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10 flex justify-between">
+                    <p class="flex-1">A</p>
+                    <p class="flex-1">Vasen</p>
+                </li>
+                <li class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10 flex justify-between">
+                    <p class="flex-1">D</p>
+                    <p class="flex-1">Oikea</p>
+
+                </li>
+                <li class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10 flex justify-between">
+                    <p class="flex-1">W / Välilyönti</p>
+                    <p class="flex-1">Hyppy</p>
+
+                </li>
+                <li class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10 flex justify-between">
+                    <p class="flex-1">Esc</p>
+                    <p class="flex-1">Menu</p>
+                </li>
+                <li class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10 flex justify-between">
+                    <p class="flex-1">&larr;</p>
+                    <p class="flex-1">Gravitaatio vasen</p>
+
+                </li>
+                <li class="text-xl font-lato mx-4 max-w-xl sm:text-2xl leading-10 flex justify-between">
+                    <p class="flex-1">&rarr;</p>
+                    <p class="flex-1">Gravitaatio oikea</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

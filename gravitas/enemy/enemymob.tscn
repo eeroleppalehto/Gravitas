@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3gkbeqttnypk"]
+
+[ext_resource type="Texture2D" uid="uid://dyp2ne5f0feqy" path="res://Assets/Gravitas_assets/CosmicLilac_AnimatedSpriteSheet.png" id="1_ibcfl"]
+[ext_resource type="Script" path="res://enemy/enemymob.gd" id="1_pqlpx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2q5us"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr1uf"]
+atlas = ExtResource("1_ibcfl")
+region = Rect2(160, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh05u"]
+atlas = ExtResource("1_ibcfl")
+region = Rect2(176, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6so8"]
+atlas = ExtResource("1_ibcfl")
+region = Rect2(192, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_envhf"]
+atlas = ExtResource("1_ibcfl")
+region = Rect2(208, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l866b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr1uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh05u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6so8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_envhf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jjkml"]
+radius = 41.3038
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_pqlpx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2q5us")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 8)
+sprite_frames = SubResource("SpriteFrames_l866b")
+animation = &"Idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_jjkml")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
