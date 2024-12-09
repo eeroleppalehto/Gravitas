@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Gravity="*res://Scripts/Gravity.gd"
+Audio="*res://Scripts/Audio.gd"
 
 [display]
 
