@@ -1,7 +1,9 @@
 extends Node2D
 
 
-
+func _ready():
+	Audio.play_music_level()
+	pass
 
 func _on_quit_pressed():
 	get_tree().quit()
