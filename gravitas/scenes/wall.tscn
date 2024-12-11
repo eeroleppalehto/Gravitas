@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjewspf8p0hq4"]
+
+[ext_resource type="Texture2D" uid="uid://tdqtu2i0jasr" path="res://Assets/Gravitas_assets/CosmicLilac_Tiles.png" id="1_gstrn"]
+[ext_resource type="Script" path="res://scenes/wall.gd" id="1_w6edw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pof3o"]
+radius = 113.43
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg4l5"]
+size = Vector2(8, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kayc7"]
+atlas = ExtResource("1_gstrn")
+region = Rect2(16, 104, 32, 8)
+
+[node name="Wall" type="Area2D"]
+script = ExtResource("1_w6edw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pof3o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_mg4l5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = SubResource("AtlasTexture_kayc7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

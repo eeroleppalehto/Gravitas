@@ -12,6 +12,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		Collectables2.blobs += 1
 		emit_signal("_item_collected", 1)  # Emit signal with amount (1 for this example)
 		queue_free()  # Remove the item from the scene
 
