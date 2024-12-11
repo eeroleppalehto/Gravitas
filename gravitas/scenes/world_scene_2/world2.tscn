@@ -298,8 +298,8 @@ sources/0 = SubResource("TileSetAtlasSource_dpgvs")
 script = ExtResource("1_njbdj")
 
 [node name="SpaceBackground" type="Sprite2D" parent="."]
-position = Vector2(55.5, -0.999992)
-scale = Vector2(1.6375, 1.54857)
+position = Vector2(61.4999, 20.5)
+scale = Vector2(2.06917, 2.17286)
 texture = ExtResource("2_j84x0")
 
 [node name="collectable4" parent="." instance=ExtResource("4_sp7jd")]
